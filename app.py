@@ -3,8 +3,8 @@ import hashlib
 
 # 讀取環境變數 (包含加密金鑰與網頁進入密碼)
 try:
-    TEAM_SECRET_SALT = st.secrete["TEAM_SECRET_SALT"]
-    APP_PASSWORD = st.secrete["APP_PASSWORD"]
+    TEAM_SECRET_SALT = st.secret["TEAM_SECRET_SALT"]
+    APP_PASSWORD = st.secret["APP_PASSWORD"]
 except KeyError:
     st.error("系統錯誤：找不到安全設定，請聯繫系統管理員。")
     st.stop()
